@@ -3,9 +3,9 @@ const menu = require("../models/menu");
 
 const cardapio = new menuList();
 
-cardapio.addMenu(new menu(1 , "Café", 5.00 , 12));
-cardapio.addMenu(new menu(2 , "coxinha", 5.00 , 12));
-cardapio.addMenu(new menu(3 , "coca cola", 5.00 , 12));
+cardapio.addMenu(new menu(1 , "Café Expresso", 5.00 , 12));
+cardapio.addMenu(new menu(2 , "Coxinha", 5.00 , 12));
+cardapio.addMenu(new menu(3 , "Pão de Queijo", 5.00 , 12));
 
 const router = {
     getAllMenu: (req, res) => {

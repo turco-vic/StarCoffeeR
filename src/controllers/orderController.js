@@ -10,11 +10,11 @@ pedido.addOrder(new Order(1, "Coca Cola", 5.00, "Pendente"));
 const router = {
     addOrder: (req, res) => {
         try {
-            const { quantity, item, price } = req.body;
-            if (!quantity || !item || !price) {
+            const { quantidade, item, preco } = req.body;
+            if (!quantidade || !item || !preco) {
                 throw new Error("Preencha todos os campos para adicionar um pedido");
             }
-            const order = new Order(quantity, item, price, "Pendente");
+            const order = new Order(quantidade, item, preco, "Pendente");
             pedido.addOrder(order);
             return res.status(201).json({ message: "Pedido adicionado com sucesso", order });
         } catch (error) {
@@ -46,10 +46,10 @@ const router = {
                 return res.status(404).json({ message: "Pedido não encontrado" });
             }
             if (order.status !== "Pendente") {
-                return res.status(403).json({ message: "Não é possível deletar um pedido que já está em preparo ou pronto" });
+                return res.status(403).json({ message: "Não é possível deletar um pedido que já está em preparo ou está pronto" });
             }
             pedido.deleteOrder(id);
-            return res.status(200).json({ message: "Pedido cancelado com sucesso" });
+            return res.status(200).json({ message: "Pedido cancelado" });
         } catch (error) {
             return res.status(400).json({ message: "Erro ao cancelar pedido", error });
         }

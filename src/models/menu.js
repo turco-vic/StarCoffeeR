@@ -1,9 +1,9 @@
 class Menu{
-    constructor(id,nome, price, quantity){
+    constructor(id,nome, preco, quantidade){
         this.id = id;
         this.nome = nome;
-        this.price = price;
-        this.quantity = quantity
+        this.preco = preco;
+        this.quantidade = quantidade
     }
 }
 
