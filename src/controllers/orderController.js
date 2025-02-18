@@ -21,6 +21,7 @@ const router = {
             res.status(400).json({ message: "Erro ao adicionar pedido", error });
         }
     },
+
     getAllOrders: (req, res) => {
         try {
             const orders = pedido.getAllOrders();
@@ -29,6 +30,7 @@ const router = {
             res.status(400).json({ message: "Erro ao buscar pedidos", error });
         }
     },
+
     getOrderById: (req, res) => {
         try {
             const {id} = req.params;
@@ -38,6 +40,7 @@ const router = {
             res.status(400).json({ message: "Erro ao buscar pedido", error });
         }
     },
+    
     deleteOrder: (req, res) => {
         try {
             const { id } = req.params;
