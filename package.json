@@ -1,7 +1,6 @@
 {
   "name": "starcoffeer",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -25,5 +24,14 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/turco-vic/StarCoffeeR.git"
+  },
+  "bugs": {
+    "url": "https://github.com/turco-vic/StarCoffeeR/issues"
+  },
+  "homepage": "https://github.com/turco-vic/StarCoffeeR#readme",
+  "description": ""
 }

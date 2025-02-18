@@ -33,7 +33,7 @@ const router = {
         try {
             const {id} = req.params;
             const order = pedido.getOrderById(id);
-            return res.status(200).json({status: order.status});
+            return res.status(200).json({status: order.status, item: order.item, quantidade: order.quantidade, preco: order.preco});
         } catch (error) {
             res.status(400).json({ message: "Erro ao buscar pedido", error });
         }

@@ -6,6 +6,7 @@ class MenuList{
     getAllMenu() {
         return this.menu;
     }
+    
     addMenu(menu) {
         this.menu.push(menu);
     }

@@ -10,6 +10,7 @@ class OrderList {
     getAllOrders() {
         return this.orders;
     }
+    
     getOrderById(id) {
         return this.orders.find(order => order.id == id);
         if(!order) {
